@@ -1,7 +1,7 @@
-/* ============================
+/* ========================================
    ESTILOS BASE - RESET
-============================ */
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
     margin: 0;
@@ -11,18 +11,18 @@
 }
 
 body {
-    background: #fff;
+    background-color: #fff;
     color: #000;
     overflow-x: hidden;
 }
 
-/* ============================
+/* ========================================
    HERO SECTION
-============================ */
+   ======================================== */
 .main-hero {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -35,7 +35,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../img/1203.jpg') center/cover;
+    background-image: url('../img/1203.jpg');
+    background-size: cover;
+    background-position: center;
     filter: grayscale(100%) contrast(110%);
     z-index: -1;
 }
@@ -49,7 +51,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Permite que en móvil los elementos se ajusten */
 }
 
 .brand-logo {
@@ -63,32 +64,15 @@ body {
 }
 
 .nav-menu a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 2px;
-    position: relative;
-    padding-bottom: 5px;
-}
-
-.nav-menu a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: #fff;
-    transition: width 0.3s ease;
-}
-
-.nav-menu a:hover::after {
-    width: 100%;
 }
 
 .social-box i {
-    color: #fff;
+    color: white;
     margin-left: 20px;
     font-size: 18px;
 }
@@ -103,7 +87,7 @@ body {
 .mouse-icon {
     width: 30px;
     height: 50px;
-    border: 2px solid #fff;
+    border: 2px solid white;
     border-radius: 20px;
     position: relative;
 }
@@ -113,7 +97,7 @@ body {
     position: absolute;
     width: 6px;
     height: 6px;
-    background: #fff;
+    background-color: white;
     border-radius: 50%;
     left: 50%;
     transform: translateX(-50%);
@@ -127,11 +111,11 @@ body {
     100% { opacity: 1; top: 8px; }
 }
 
-/* ============================
+/* ========================================
    SECCIÓN DESTINOS
-============================ */
+   ======================================== */
 .destinos-intro {
-    background: #f4f4f4;
+    background-color: #f4f4f4;
     padding: 100px 20px;
     text-align: center;
 }
@@ -152,38 +136,38 @@ body {
 }
 
 .btn-black {
-    background: #000;
-    color: #fff;
+    background-color: black;
+    color: white;
     border: none;
     padding: 12px 35px;
     border-radius: 25px;
     font-size: 10px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-black:hover {
-    background: #d4af37;
-    color: #000;
-    transform: scale(1.1);
+    background-color: #555;
+    transform: scale(1.05);
 }
 
-/* ============================
-   ZONA DE NOTICIAS (margen 4cm)
-============================ */
+/* ========================================
+   ZONA DE NOTICIAS (padding lateral ultra reducido)
+   ======================================== */
 .news-section {
     padding-top: 80px;
-    background: #fff;
+    background-color: #fff;
 }
 
 .news-container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 4cm;      /* 4 cm a cada lado en desktop */
+    padding: 0 5px; /* ← REDUCIDO A 10px */
     margin-bottom: 40px;
 }
 
+/* Noticia destacada 50/50 */
 .featured-news {
     display: flex;
     align-items: center;
@@ -201,11 +185,6 @@ body {
     height: 550px;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
-}
-
-.featured-img:hover img {
-    transform: scale(1.1);
 }
 
 .featured-content {
@@ -219,7 +198,7 @@ body {
     line-height: 1.1;
 }
 
-/* Grid de tarjetas */
+/* Grid de tarjetas secundarias */
 .secondary-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -242,7 +221,7 @@ body {
 
 .small-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .small-card img {
@@ -250,20 +229,15 @@ body {
     height: 280px;
     object-fit: cover;
     margin-bottom: 15px;
-    transition: transform 0.5s ease;
-}
-
-.small-card:hover img {
-    transform: scale(1.1);
 }
 
 .card-content {
     flex: 1;
-    padding: 0 10px 10px;
+    padding: 0 10px 10px 10px;
 }
 
 .small-card .btn-read-black {
-    margin: 0 10px 20px;
+    margin: 0 10px 20px 10px;
     align-self: flex-start;
 }
 
@@ -298,7 +272,7 @@ body {
 
 .btn-read-black {
     display: inline-block;
-    background: #000;
+    background-color: #000;
     color: #fff;
     padding: 8px 30px;
     border-radius: 25px;
@@ -306,21 +280,20 @@ body {
     font-size: 10px;
     font-weight: bold;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-read-black:hover {
-    background: #d4af37;
-    color: #000;
-    transform: scale(1.1);
+    background-color: #555;
+    transform: scale(1.05);
 }
 
-/* ============================
-   BANNER PUBLICITARIO (margen 4cm)
-============================ */
+/* ========================================
+   BANNER PUBLICITARIO (padding ultra reducido)
+   ======================================== */
 .ad-banner-full {
     width: 100%;
-    padding: 0 4cm;
+    padding: 0 10px; /* ← REDUCIDO A 10px */
     box-sizing: border-box;
     margin: 40px 0;
     text-align: center;
@@ -333,11 +306,11 @@ body {
     margin: 0 auto;
 }
 
-/* ============================
-   NEWSLETTER
-============================ */
+/* ========================================
+   NEWSLETTER (50/50)
+   ======================================== */
 .newsletter-block {
-    background: #f4f4f4;
+    background-color: #f4f4f4;
     width: 100%;
     margin: 0;
 }
@@ -397,7 +370,6 @@ body {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     background: #fff;
-    font-size: 16px; /* Evita zoom en iOS */
 }
 
 .news-form button {
@@ -408,14 +380,11 @@ body {
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 16px;
+    transition: background 0.2s ease;
 }
 
 .news-form button:hover {
-    background: #d4af37;
-    color: #000;
-    transform: scale(1.05);
+    background: #555;
 }
 
 .disclaimer {
@@ -426,19 +395,21 @@ body {
     line-height: 1.4;
 }
 
-/* ============================
+/* ========================================
    FOOTER
-============================ */
+   ======================================== */
 .main-footer {
-    background: #3d3d3d;
-    color: #fff;
-    padding: 80px 20px 40px;
+    background-color: #3d3d3d;
+    color: #ffffff;
+    padding: 80px 20px 40px 20px;
     text-align: center;
+    margin-top: 0;
 }
 
 .footer-logo-main img {
     width: 180px;
     margin-bottom: 40px;
+    filter: none;
 }
 
 .footer-nav-primary {
@@ -452,54 +423,27 @@ body {
     font-size: 11px;
     letter-spacing: 2px;
     margin: 0 20px;
-    position: relative;
-    padding-bottom: 5px;
+    transition: color 0.2s ease;
 }
 
-.footer-nav-primary a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: #fff;
-    transition: width 0.3s ease;
-}
-
-.footer-nav-primary a:hover::after {
-    width: 100%;
+.footer-nav-primary a:hover {
+    color: #ccc;
 }
 
 .footer-nav-secondary {
     margin-bottom: 50px;
 }
 
-.footer-nav-secondary a {
+.footer-nav-secondary a,
+.footer-nav-secondary .separator {
     color: #b0b0b0;
     text-decoration: none;
     font-size: 12px;
     margin: 0 5px;
-    position: relative;
 }
 
-.footer-nav-secondary a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -2px;
-    left: 0;
-    background: #b0b0b0;
-    transition: width 0.3s ease;
-}
-
-.footer-nav-secondary a:hover::after {
-    width: 100%;
-}
-
-.footer-nav-secondary .separator {
-    color: #b0b0b0;
+.footer-nav-secondary a:hover {
+    color: #fff;
 }
 
 .socialite-logo img {
@@ -514,23 +458,9 @@ body {
     line-height: 1.6;
 }
 
-/* ============================
-   ANIMACIONES SCROLL
-============================ */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ============================
-   AJUSTES ESPECÍFICOS DE IMAGEN
-============================ */
+/* ========================================
+   AJUSTES ESPECÍFICOS PARA IMÁGENES
+   ======================================== */
 .featured-img img.img-full {
     object-fit: cover !important;
     object-position: center 55% !important;
@@ -546,9 +476,23 @@ img[src="img/7.jpg"] {
     object-position: center 100% !important;
 }
 
-/* ============================
-   RESPONSIVE (tablets y móviles)
-============================ */
+/* ========================================
+   ANIMACIONES ADICIONALES
+   ======================================== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   RESPONSIVE (tuyo original)
+   ======================================== */
 @media (max-width: 992px) {
     .newsletter-grid {
         flex-direction: column;
@@ -558,176 +502,142 @@ img[src="img/7.jpg"] {
         flex: 0 0 100%;
     }
     .secondary-grid {
-        grid-template-columns: 1fr; /* Una columna en tablets/móviles */
+        grid-template-columns: 1fr;
     }
     .featured-news {
         flex-direction: column;
     }
-    .news-container,
     .ad-banner-full {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 0 10px;
     }
-    .top-nav {
-        padding: 20px 15px;
-    }
-    .nav-menu {
-        gap: 15px;
-    }
-    .nav-menu a {
-        font-size: 10px;
-    }
-    .brand-logo {
-        width: 120px;
-    }
-    .hero-title {
-        font-size: 22px;
-    }
-    .featured-title {
-        font-size: 24px;
+    .news-container {
+        padding: 0 10px;
     }
 }
 
-/* ============================
-   MÓVILES PEQUEÑOS (max-width: 600px)
-   AJUSTES ESPECIALES PARA HEADER Y HERO
-============================ */
+/* ========================================
+   ANIMACIONES Y EFECTOS (HOVER)
+   ======================================== */
+
+/* Zoom en imágenes de noticias */
+.featured-img, .small-card img {
+    overflow: hidden;
+}
+
+.featured-img img, .small-card img {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.featured-img:hover img, .small-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Efecto Zoom y cambio de color en botones */
+.btn-black, .btn-read-black, .news-form button {
+    transition: all 0.3s ease !important;
+}
+
+.btn-black:hover, .btn-read-black:hover, .news-form button:hover {
+    transform: scale(1.1);
+    background-color: #d4af37 !important;
+    color: #000 !important;
+}
+
+/* Barra animada en los links del menú y footer */
+.nav-menu a, .footer-nav-primary a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-menu a::after, .footer-nav-primary a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after, .footer-nav-primary a:hover::after {
+    width: 100%;
+}
+
+/* Barra animada para links oscuros (footer secundario) */
+.footer-nav-secondary a {
+    position: relative;
+}
+
+.footer-nav-secondary a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #b0b0b0;
+    transition: width 0.3s ease;
+}
+
+.footer-nav-secondary a:hover::after {
+    width: 100%;
+}
+
+/* ========================================
+   NUEVAS REGLAS PARA MÓVIL (SOLO HEADER Y HERO)
+   ======================================== */
 @media (max-width: 600px) {
-    /* HEADER: reorganización en columna */
+    /* Header: reorganización en columna */
     .top-nav {
-        padding: 15px;
+        padding: 20px 15px; /* Reducimos el padding lateral para que no se desborde */
     }
+
     .nav-wrapper {
         flex-direction: column;
         gap: 15px;
     }
+
     .logo-container {
         text-align: center;
     }
+
     .brand-logo {
-        width: 140px; /* un poco más grande para que destaque */
+        width: 140px; /* Un poco más grande para que destaque */
     }
+
     .nav-menu {
         justify-content: center;
         flex-wrap: wrap;
         gap: 15px;
     }
+
     .nav-menu a {
-        font-size: 12px; /* más fácil de tocar */
+        font-size: 12px; /* Más fácil de tocar */
         letter-spacing: 1px;
     }
+
     .social-box {
         display: flex;
         justify-content: center;
         gap: 15px;
     }
+
     .social-box i {
-        margin-left: 0; /* quitamos el margen izquierdo que tenía */
+        margin-left: 0; /* Quitamos el margen izquierdo que tenía */
         font-size: 20px;
     }
 
-    /* HERO: ajuste de altura y fondo */
+    /* Hero: ajuste de altura y fondo */
     .main-hero {
-        height: 70vh; /* un poco más compacto en móvil */
+        height: 70vh; /* Un poco más compacto en móvil */
     }
+
     .main-hero::before {
-        background-position: center; /* aseguramos que la imagen se centre */
+        background-position: center; /* Aseguramos que la imagen se centre */
     }
+
     .scroll-wrapper {
         margin-bottom: 20px;
-    }
-
-    /* Resto de ajustes para móvil (ya existentes) */
-    body {
-        font-size: 14px;
-    }
-    .destinos-intro {
-        padding: 60px 15px;
-    }
-    .hero-title {
-        font-size: 20px;
-    }
-    .btn-black {
-        padding: 10px 25px;
-        font-size: 12px;
-    }
-    .news-section {
-        padding-top: 40px;
-    }
-    .featured-img img {
-        height: 300px;
-    }
-    .featured-content {
-        padding-right: 0;
-    }
-    .featured-title {
-        font-size: 22px;
-    }
-    .card-excerpt {
-        font-size: 13px;
-    }
-    .small-card img {
-        height: 200px;
-    }
-    .small-title {
-        font-size: 16px;
-    }
-    .small-excerpt {
-        font-size: 12px;
-    }
-    .btn-read-black {
-        padding: 8px 20px;
-        font-size: 11px;
-    }
-    .ad-banner-full {
-        margin: 20px 0;
-    }
-    .newsletter-image img {
-        min-height: 300px;
-    }
-    .newsletter-content {
-        padding: 40px 20px;
-    }
-    .newsletter-content h3 {
-        font-size: 22px;
-    }
-    .newsletter-content p {
-        font-size: 14px;
-    }
-    .news-form input,
-    .news-form button {
-        padding: 12px;
-        font-size: 14px;
-    }
-    .disclaimer {
-        font-size: 9px;
-    }
-    .main-footer {
-        padding: 50px 15px 30px;
-    }
-    .footer-logo-main img {
-        width: 140px;
-    }
-    .footer-nav-primary a {
-        display: block;
-        margin: 10px 0;
-        font-size: 12px;
-    }
-    .footer-nav-secondary {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-    .footer-nav-secondary a {
-        margin: 0;
-    }
-    .footer-nav-secondary .separator {
-        display: none;
-    }
-    .socialite-logo img {
-        width: 80px;
-    }
-    .copyright {
-        font-size: 9px;
     }
 }
