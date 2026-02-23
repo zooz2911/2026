@@ -1,0 +1,733 @@
+/* ============================
+   ESTILOS BASE - RESET
+============================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    overflow-x: hidden;
+}
+
+/* ============================
+   HERO SECTION
+============================ */
+.main-hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.main-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/1203.jpg') center/cover;
+    filter: grayscale(100%) contrast(110%);
+    z-index: -1;
+}
+
+.top-nav {
+    width: 100%;
+    padding: 30px 60px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que en móvil los elementos se ajusten */
+}
+
+.brand-logo {
+    width: 180px;
+    height: auto;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.social-box i {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.scroll-wrapper {
+    margin-top: auto;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.mouse-icon {
+    width: 30px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    position: relative;
+}
+
+.mouse-icon::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    animation: scrollWheel 2s infinite;
+}
+
+@keyframes scrollWheel {
+    0% { opacity: 1; top: 8px; }
+    50% { opacity: 0.5; top: 18px; }
+    100% { opacity: 1; top: 8px; }
+}
+
+/* ============================
+   SECCIÓN DESTINOS
+============================ */
+.destinos-intro {
+    background: #f4f4f4;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.tag-category {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.btn-black {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-black:hover {
+    background: #d4af37;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* ============================
+   ZONA DE NOTICIAS (margen 4cm)
+============================ */
+.news-section {
+    padding-top: 80px;
+    background: #fff;
+}
+
+.news-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 4cm;      /* 4 cm a cada lado en desktop */
+    margin-bottom: 40px;
+}
+
+.featured-news {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.featured-news .featured-img,
+.featured-news .featured-content {
+    flex: 1;
+}
+
+.featured-img img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.featured-img:hover img {
+    transform: scale(1.1);
+}
+
+.featured-content {
+    padding-right: 20px;
+}
+
+.featured-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 15px 0;
+    line-height: 1.1;
+}
+
+/* Grid de tarjetas */
+.secondary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.mt-50 {
+    margin-top: 20px;
+}
+
+.small-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.small-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.small-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+}
+
+.small-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    flex: 1;
+    padding: 0 10px 10px;
+}
+
+.small-card .btn-read-black {
+    margin: 0 10px 20px;
+    align-self: flex-start;
+}
+
+.card-tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.card-excerpt {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.small-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.small-excerpt {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.btn-read-black {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-read-black:hover {
+    background: #d4af37;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* ============================
+   BANNER PUBLICITARIO (margen 4cm)
+============================ */
+.ad-banner-full {
+    width: 100%;
+    padding: 0 4cm;
+    box-sizing: border-box;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.ad-banner-full img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ============================
+   NEWSLETTER
+============================ */
+.newsletter-block {
+    background: #f4f4f4;
+    width: 100%;
+    margin: 0;
+}
+
+.newsletter-grid {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.newsletter-image {
+    flex: 0 0 50%;
+}
+
+.newsletter-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.newsletter-content {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+.content-wrapper {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.newsletter-content h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.newsletter-content p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.news-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-form input {
+    padding: 14px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 16px; /* Evita zoom en iOS */
+}
+
+.news-form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.news-form button:hover {
+    background: #d4af37;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.disclaimer {
+    display: block;
+    font-size: 10px;
+    color: #999;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+/* ============================
+   FOOTER
+============================ */
+.main-footer {
+    background: #3d3d3d;
+    color: #fff;
+    padding: 80px 20px 40px;
+    text-align: center;
+}
+
+.footer-logo-main img {
+    width: 180px;
+    margin-bottom: 40px;
+}
+
+.footer-nav-primary {
+    margin-bottom: 25px;
+}
+
+.footer-nav-primary a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin: 0 20px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.footer-nav-primary a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.footer-nav-primary a:hover::after {
+    width: 100%;
+}
+
+.footer-nav-secondary {
+    margin-bottom: 50px;
+}
+
+.footer-nav-secondary a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 0 5px;
+    position: relative;
+}
+
+.footer-nav-secondary a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background: #b0b0b0;
+    transition: width 0.3s ease;
+}
+
+.footer-nav-secondary a:hover::after {
+    width: 100%;
+}
+
+.footer-nav-secondary .separator {
+    color: #b0b0b0;
+}
+
+.socialite-logo img {
+    width: 100px;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1);
+}
+
+.copyright {
+    font-size: 10px;
+    color: #999;
+    line-height: 1.6;
+}
+
+/* ============================
+   ANIMACIONES SCROLL
+============================ */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================
+   AJUSTES ESPECÍFICOS DE IMAGEN
+============================ */
+.featured-img img.img-full {
+    object-fit: cover !important;
+    object-position: center 55% !important;
+}
+
+img[src="img/2.jpg"] {
+    object-fit: cover;
+    object-position: center 30% !important;
+}
+
+img[src="img/7.jpg"] {
+    object-fit: cover !important;
+    object-position: center 100% !important;
+}
+
+/* ============================
+   RESPONSIVE (tablets y móviles)
+============================ */
+@media (max-width: 992px) {
+    .newsletter-grid {
+        flex-direction: column;
+    }
+    .newsletter-image,
+    .newsletter-content {
+        flex: 0 0 100%;
+    }
+    .secondary-grid {
+        grid-template-columns: 1fr; /* Una columna en tablets/móviles */
+    }
+    .featured-news {
+        flex-direction: column;
+    }
+    .news-container,
+    .ad-banner-full {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .top-nav {
+        padding: 20px 15px;
+    }
+    .nav-menu {
+        gap: 15px;
+    }
+    .nav-menu a {
+        font-size: 10px;
+    }
+    .brand-logo {
+        width: 120px;
+    }
+    .hero-title {
+        font-size: 22px;
+    }
+    .featured-title {
+        font-size: 24px;
+    }
+}
+
+/* ============================
+   MÓVILES PEQUEÑOS (max-width: 600px)
+   AJUSTES ESPECIALES PARA HEADER Y HERO
+============================ */
+@media (max-width: 600px) {
+    /* HEADER: reorganización en columna */
+    .top-nav {
+        padding: 15px;
+    }
+    .nav-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .logo-container {
+        text-align: center;
+    }
+    .brand-logo {
+        width: 140px; /* un poco más grande para que destaque */
+    }
+    .nav-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .nav-menu a {
+        font-size: 12px; /* más fácil de tocar */
+        letter-spacing: 1px;
+    }
+    .social-box {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    .social-box i {
+        margin-left: 0; /* quitamos el margen izquierdo que tenía */
+        font-size: 20px;
+    }
+
+    /* HERO: ajuste de altura y fondo */
+    .main-hero {
+        height: 70vh; /* un poco más compacto en móvil */
+    }
+    .main-hero::before {
+        background-position: center; /* aseguramos que la imagen se centre */
+    }
+    .scroll-wrapper {
+        margin-bottom: 20px;
+    }
+
+    /* Resto de ajustes para móvil (ya existentes) */
+    body {
+        font-size: 14px;
+    }
+    .destinos-intro {
+        padding: 60px 15px;
+    }
+    .hero-title {
+        font-size: 20px;
+    }
+    .btn-black {
+        padding: 10px 25px;
+        font-size: 12px;
+    }
+    .news-section {
+        padding-top: 40px;
+    }
+    .featured-img img {
+        height: 300px;
+    }
+    .featured-content {
+        padding-right: 0;
+    }
+    .featured-title {
+        font-size: 22px;
+    }
+    .card-excerpt {
+        font-size: 13px;
+    }
+    .small-card img {
+        height: 200px;
+    }
+    .small-title {
+        font-size: 16px;
+    }
+    .small-excerpt {
+        font-size: 12px;
+    }
+    .btn-read-black {
+        padding: 8px 20px;
+        font-size: 11px;
+    }
+    .ad-banner-full {
+        margin: 20px 0;
+    }
+    .newsletter-image img {
+        min-height: 300px;
+    }
+    .newsletter-content {
+        padding: 40px 20px;
+    }
+    .newsletter-content h3 {
+        font-size: 22px;
+    }
+    .newsletter-content p {
+        font-size: 14px;
+    }
+    .news-form input,
+    .news-form button {
+        padding: 12px;
+        font-size: 14px;
+    }
+    .disclaimer {
+        font-size: 9px;
+    }
+    .main-footer {
+        padding: 50px 15px 30px;
+    }
+    .footer-logo-main img {
+        width: 140px;
+    }
+    .footer-nav-primary a {
+        display: block;
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    .footer-nav-secondary {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .footer-nav-secondary a {
+        margin: 0;
+    }
+    .footer-nav-secondary .separator {
+        display: none;
+    }
+    .socialite-logo img {
+        width: 80px;
+    }
+    .copyright {
+        font-size: 9px;
+    }
+}
